@@ -35,6 +35,18 @@ function calcular(){
 
 }
 
+function limpiar(){
+    valor = document.getElementById('valorAuto');
+    pE = document.getElementById('pEnganche');
+    pF = document.getElementById('pFinanciar');
+    pM = document.getElementById('pMensual');
+
+    valor.value = "";
+    pE.innerHTML = "";
+    pF.innerHTML = "";
+    pM.innerHTML = "";
+
+}
 
 
 
