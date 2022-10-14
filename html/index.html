@@ -60,7 +60,27 @@
 
     </section>
 
+    <script>
+        const btnCalcular = document.querySelector("#btnCalcular");
 
+        // codificar el evento click de btnCalcular Usando funcion =>
+        btnCalcular.addEventListener('click',()=>{
+
+            valor = document.querySelector("#valorAuto").value;
+            errorValor = document.querySelector("#errorValor");
+
+            // condicion ? si : no
+
+            valor== "" ? errorValor.style.visibility = 'visible': errorValor.style.visibility = 'hidden' ;
+
+            if(valor==0){
+
+                alert("Faltan datos por capturar");
+
+            }
+
+        })
+    </script>
 
 </body>
 </html>
