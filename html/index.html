@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 3 - Unidad 2</title>
+    <link rel="stylesheet" href="/css/estilos.css">
+    <script src="/js/main.js"></script>
+</head>
+<body>
+    <h1>Practica 3 - Unidad 2</h1>
+
+    <section id="contenedor-cotizacion">
+        <h3>Cotizacion</h3>
+
+        <div id="contenido">
+            <div id="contenedor-campos">
+                <div class="campo">
+                    <label>Valor del Automovil</label>
+                    <br>
+                    <div id="contenedor-valor">
+                        <input class="input-text" id="valorAuto" type="number" placeholder="Valor Automovil">
+                        <label id="errorValor" style="color: brown; visibility: hidden;">*</label>
+                    </div>
+                </div>
+                <div class="campo">
+                    <label>Enganche</label>
+                    <br>
+                    <p id="pEnganche"></p>
+                </div>
+                <div class="campo">
+                    <label>Total a Financiar</label>
+                    <br>
+                    <p id="pFinanciar"></p>
+                </div>
+                <div class="campo">
+                    <label>Planes de Credito</label>
+                    <br>
+                    <select name="pagoM" id="pagoM">
+
+                        <option value="12">12 Meses</option>
+                        <option value="18">18 Meses</option>
+                        <option value="24">24 Meses</option>
+                        <option value="36">36 Meses</option>
+                        <option value="48">48 Meses</option>
+                
+                    </select>
+
+                    <p id="pMensual"></p>
+
+                </div>
+            </div>
+                
+            <div id="contenedor-botones">
+                <button id="btnLimpiar" onclick="limpiar()">Limpiar</button>
+                <button id="btnCalcular" onclick="calcular()">Calcular</button>
+            </div>
+        </div>
+
+    </section>
+
+    <script>
+        const btnCalcular = document.querySelector("#btnCalcular");
+
+        // codificar el evento click de btnCalcular Usando funcion =>
+        btnCalcular.addEventListener('click',()=>{
+
+            valor = document.querySelector("#valorAuto").value;
+            errorValor = document.querySelector("#errorValor");
+
+            // condicion ? si : no
+
+            valor== "" ? errorValor.style.visibility = 'visible': errorValor.style.visibility = 'hidden' ;
+
+            if(valor==0){
+
+                alert("Faltan datos por capturar");
+
+            }
+
+        })
+    </script>
+
+</body>
+</html>
