@@ -5,11 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practica 3 - Unidad 2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/estilos.css">
     <script src="/js/main.js"></script>
 </head>
 <body>
-    <h1>Practica 3 - Unidad 2</h1>
+    <header id="encabezado">
+        <h1>Practica 3 - Unidad 2</h1>
+    </header>
 
     <section id="contenedor-cotizacion">
         <h3>Cotizacion</h3>
@@ -60,6 +65,10 @@
 
     </section>
 
+    <footer id="pie">
+        <p>© 2022, Ernesto Galindo. Todos los derechos Reservados</p>
+    </footer>
+
     <script>
         const btnCalcular = document.querySelector("#btnCalcular");
 
@@ -71,7 +80,7 @@
 
             // condicion ? si : no
 
-            valor== "" ? errorValor.style.visibility = 'visible': errorValor.style.visibility = 'hidden' ;
+            valor== "" || valor==0 ? errorValor.style.visibility = 'visible': errorValor.style.visibility = 'hidden' ;
 
             if(valor==0){
 
