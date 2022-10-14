@@ -11,6 +11,56 @@
 <body>
     <h1>Practica 3 - Unidad 2</h1>
 
+    <section id="contenedor-cotizacion">
+        <h3>Cotizacion</h3>
+
+        <div id="contenido">
+            <div id="contenedor-campos">
+                <div class="campo">
+                    <label>Valor del Automovil</label>
+                    <br>
+                    <div id="contenedor-valor">
+                        <input class="input-text" id="valorAuto" type="number" placeholder="Valor Automovil">
+                        <label id="errorValor" style="color: brown; visibility: hidden;">*</label>
+                    </div>
+                </div>
+                <div class="campo">
+                    <label>Enganche</label>
+                    <br>
+                    <p id="pEnganche"></p>
+                </div>
+                <div class="campo">
+                    <label>Total a Financiar</label>
+                    <br>
+                    <p id="pFinanciar"></p>
+                </div>
+                <div class="campo">
+                    <label>Planes de Credito</label>
+                    <br>
+                    <select name="pagoM" id="pagoM">
+
+                        <option value="12">12 Meses</option>
+                        <option value="18">18 Meses</option>
+                        <option value="24">24 Meses</option>
+                        <option value="36">36 Meses</option>
+                        <option value="48">48 Meses</option>
+                
+                    </select>
+
+                    <p id="pMensual"></p>
+
+                </div>
+            </div>
+                
+            <div id="contenedor-botones">
+                <button id="btnLimpiar" onclick="limpiar()">Limpiar</button>
+                <button id="btnCalcular" onclick="calcular()">Calcular</button>
+            </div>
+        </div>
+
+    </section>
+
+
 
 </body>
 </html>
